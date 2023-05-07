@@ -1,14 +1,14 @@
-card_w = 800
-card_h = 1100
+card_w = 690
+card_h = 1155
 
 outer_margin = 100
 inner_margin = 50
 
 sym_w_corner = 70
-sym_w_inside = 120
+sym_w_inside = 100
 sym_w_big = 210
 
-hutschmuck_w = 30
+hutschmuck_w = 50
 
 # txt_w_corner is sym_w_corner
 txt_h_corner = 60

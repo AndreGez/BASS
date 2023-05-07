@@ -47,10 +47,10 @@ def create_cards(sym_h_max, sym_inner_h_max, sym_aces_h_max):
                 place_image(canvas, paling_hat, hut_pos)
             elif card == 'B':
                 paling = Image.open('data/resized/gladde/paling_b_2_smol.png')
-                paling_hat = Image.open('data/resized/hutschmuck/bube_smol.png')
+                paling_hat = Image.open('data/resized/hutschmuck/propeller2_17_smol.png')
                 place_image(canvas, paling, (card_w//2, card_h//2))
                 hut_pos = get_hutschmuck_position((card_w//2, card_h//2), paling.width)
-                place_image(canvas, paling_hat, hut_pos)
+                place_image(canvas, paling_hat, (hut_pos[0], hut_pos[1] + 8))
             canvas.save(output_folder + color + '_' + card + '.png')
 
 def create_jokers():
@@ -72,6 +72,9 @@ def create_back():
     place_image(canvas, back, (card_w//2, card_h//2))
     canvas.save(output_folder + 'back.png')
 
+def create_white():
+    canvas = create_canvas(card_w, card_h, 'white')
+    canvas.save(output_folder + 'white.png')
 
 def create_overview():
     h = 0
@@ -107,3 +110,4 @@ if __name__ == '__main__':
     create_jokers()
     create_back()
     create_overview()
+    create_white()

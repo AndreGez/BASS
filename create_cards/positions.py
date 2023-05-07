@@ -71,7 +71,7 @@ def get_inner_grid_positions(sym_h_max_inside):
     return positions
 
 def get_hutschmuck_position(paling_pos, paling_w):
-    return (int(paling_pos[0] - 0.4 * paling_w), int(paling_pos[1] + 0.01 * paling_w))
+    return (int(paling_pos[0] - 0.4 * paling_w), int(paling_pos[1] - 0.01 * paling_w))
 
 def get_back_main_positions(number_of_symbols):
     margin_to_center = (min(card_h, card_w) - 2 * outer_margin - sym_w_big//2)//2
